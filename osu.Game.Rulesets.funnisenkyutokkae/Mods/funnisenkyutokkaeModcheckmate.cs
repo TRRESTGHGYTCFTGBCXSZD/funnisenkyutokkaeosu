@@ -1,16 +1,16 @@
 ﻿// Copyright (c) ppy Pty Ltd <contact@ppy.sh>. Licensed under the MIT Licence.
 // See the LICENCE file in the repository root for full licence text.
 
-using System.Collections.Generic;
-using osu.Game.Beatmaps;
-using osu.Game.Rulesets.funnisenkyutokkae.Replays;
-using osu.Game.Rulesets.Mods;
+//using System.Collections.Generic;
+//using osu.Game.Beatmaps;
+//using osu.Game.Rulesets.funnisenkyutokkae.Replays;
+//using osu.Game.Rulesets.Mods;
 
-namespace osu.Game.Rulesets.funnisenkyutokkae.Mods
-{
-    public class funnisenkyutokkaeModcheckmate : Modcheckmate
-    {
-        public override ModReplayData CreateReplayData(IBeatmap beatmap, IReadOnlyList<Mod> mods)
-            => new ModReplayData(new funnisenkyutokkaeAutoGenerator(beatmap).Generate(), new ModCreatedUser { Username = "sample" });
-    }
-}
+//namespace osu.Game.Rulesets.funnisenkyutokkae.Mods
+//{
+//    public class funnisenkyutokkaeModcheckmate : Modcheckmate
+//    {
+//        public override ModReplayData CreateReplayData(IBeatmap beatmap, IReadOnlyList<Mod> mods)
+//            => new ModReplayData(new funnisenkyutokkaeAutoGenerator(beatmap).Generate(), new ModCreatedUser { Username = "sample" });
+//    }
+//}
