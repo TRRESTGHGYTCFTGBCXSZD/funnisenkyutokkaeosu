@@ -13,7 +13,6 @@ using osu.Game.Rulesets.Difficulty;
 using osu.Game.Rulesets.funnisenkyutokkae.Beatmaps;
 using osu.Game.Rulesets.funnisenkyutokkae.Mods;
 using osu.Game.Rulesets.funnisenkyutokkae.UI;
-using osu.Game.Rulesets.funnisenkyutokkae.Scoring;
 using osu.Game.Rulesets.Mods;
 using osu.Game.Rulesets.UI;
 using osuTK;
@@ -52,25 +51,6 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
         {
             new KeyBinding(InputKey.Z, funnisenkyutokkaeAction.Button1),
             new KeyBinding(InputKey.X, funnisenkyutokkaeAction.Button2),
-        };
-
-        public override Drawable CreateIcon() => new Icon(ShortName[0]);
-        protected override IEnumerable<HitResult> GetValidHitResults()
-        {
-            return new[]
-            {
-                HitResult.Great,
-                HitResult.Good,
-                HitResult.Meh
-            };
-        }
-
-        public override string GetDisplayNameForHitResult(HitResult result) => result switch
-        {
-            HitResult.Great => "funni",
-            HitResult.Good => "senkyu",
-            HitResult.Meh => "tokkae",
-            _ => base.GetDisplayNameForHitResult(result)
         };
 
         public class Icon : CompositeDrawable
