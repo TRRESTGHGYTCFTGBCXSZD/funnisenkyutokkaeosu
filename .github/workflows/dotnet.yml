@@ -27,4 +27,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: funni senkyu tokkae
-        path: osu.Game.Rulesets.funnisenkyutokkae/*/osu.Game.Rulesets.funnisenkyutokkae.dll
+        path: "*/osu.Game.Rulesets.funnisenkyutokkae.dll"
