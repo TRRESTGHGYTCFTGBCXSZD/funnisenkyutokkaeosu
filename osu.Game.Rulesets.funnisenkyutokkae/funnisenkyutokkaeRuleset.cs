@@ -68,7 +68,7 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
             }
         }
 
-        public override string ShortName => "funnisenkyutokkae";
+        public override string ShortName => "funnisenkyutokkaeruleset";
 
         public override IEnumerable<KeyBinding> GetDefaultKeyBindings(int variant = 0) => new[]
         {
