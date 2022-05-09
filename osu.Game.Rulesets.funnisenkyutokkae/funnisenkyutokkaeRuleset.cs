@@ -34,8 +34,7 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
             new funnisenkyutokkaeDifficultyCalculator(RulesetInfo, beatmap);
 
         public override IEnumerable<Mod> GetModsFor(ModType type)
-        {
-            switch (type)
+        => type switch
             {
                 case ModType.DifficultyReduction:
                     return new Mod[]
@@ -62,11 +61,10 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
                     return new Mod[]
                     {
                         new funnisenkyutokkaeModfn(),
-                    };
-                default:
-                    return new Mod[] { null };
-            }
-        }
+                    },
+                _ => Enumerable.Empty<Mod>()
+            };
+        
 
         public override string ShortName => "funnisenkyutokkaeruleset";
 
