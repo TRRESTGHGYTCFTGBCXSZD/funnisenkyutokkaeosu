@@ -34,37 +34,44 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
             new funnisenkyutokkaeDifficultyCalculator(RulesetInfo, beatmap);
 
         public override IEnumerable<Mod> GetModsFor(ModType type)
-        => type switch
+        {
+            switch (type)
             {
                 case ModType.DifficultyReduction:
                     return new Mod[]
                     {
                         new funnisenkyutokkaeModcheckmate(),
-                    },
+                        new funnisenkyutokkaeModAutoplay(),
+                    };
                 case ModType.DifficultyIncrease:
                     return new Mod[]
                     {
                         new funnisenkyutokkaeModdead(),
-                    },
+                        new funnisenkyutokkaeModAutoplay(),
+                    };
                 case ModType.Automation:
                     return new Mod[]
                     {
+                        new funnisenkyutokkaeModAutoplay(),
                         new funnisenkyutokkaeModcheckmate(),
 						new MultiMod(new funnisenkyutokkaeModhell(), new funnisenkyutokkaeModfire()),
-                    },
+                    };
                 case ModType.Conversion:
                     return new Mod[]
                     {
                         new funnisenkyutokkaeModco(),
-                    },
+                        new funnisenkyutokkaeModAutoplay(),
+                    };
                 case ModType.Fun:
                     return new Mod[]
                     {
                         new funnisenkyutokkaeModfn(),
-                    },
-                _ => Enumerable.Empty<Mod>()
-            };
-        
+                        new funnisenkyutokkaeModAutoplay(),
+                    };
+                default:
+                    return new Mod[] { null };
+            }
+        }
 
         public override string ShortName => "funnisenkyutokkaeruleset";
 
