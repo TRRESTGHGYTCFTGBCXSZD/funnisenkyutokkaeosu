@@ -41,23 +41,23 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
                     return new Mod[]
                     {
                         new funnisenkyutokkaeModcheckmate(),
-                    };
+                    },
                 case ModType.DifficultyIncrease:
                     return new Mod[]
                     {
                         new funnisenkyutokkaeModdead(),
-                    };
+                    },
                 case ModType.Automation:
                     return new Mod[]
                     {
                         new funnisenkyutokkaeModcheckmate(),
 						new MultiMod(new funnisenkyutokkaeModhell(), new funnisenkyutokkaeModfire()),
-                    };
+                    },
                 case ModType.Conversion:
                     return new Mod[]
                     {
                         new funnisenkyutokkaeModco(),
-                    };
+                    },
                 case ModType.Fun:
                     return new Mod[]
                     {
