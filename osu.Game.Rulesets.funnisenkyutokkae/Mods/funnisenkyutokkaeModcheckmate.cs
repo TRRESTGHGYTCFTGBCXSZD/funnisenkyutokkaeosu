@@ -8,7 +8,7 @@ using osu.Game.Rulesets.Mods;
 
 namespace osu.Game.Rulesets.funnisenkyutokkae.Mods
 {
-    public class funnisenkyutokkaeModcheckmate : Modcheckmate
+    public class funnisenkyutokkaeModcheckmate : Mod
     {
         public override string Name => "checkmate";
         public override string Acronym => "CM";
