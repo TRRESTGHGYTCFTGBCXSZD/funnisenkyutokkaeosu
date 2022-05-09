@@ -22,7 +22,7 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
 {
     public class funnisenkyutokkaeRuleset : Ruleset
     {
-        public override string Description => "a very funnisenkyutokkaeruleset ruleset";
+        public override string Description => "funni senkyu tokkae ruleset";
 
         public override DrawableRuleset CreateDrawableRulesetWith(IBeatmap beatmap, IReadOnlyList<Mod> mods = null) =>
             new DrawablefunnisenkyutokkaeRuleset(this, beatmap, mods);
@@ -54,6 +54,23 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
         };
 
         public override Drawable CreateIcon() => new Icon(ShortName[0]);
+        protected override IEnumerable<HitResult> GetValidHitResults()
+        {
+            return new[]
+            {
+                HitResult.Great,
+                HitResult.Good,
+                HitResult.Meh
+            };
+        },
+
+        public override string GetDisplayNameForHitResult(HitResult result) => result switch
+        {
+            HitResult.Great => "funni",
+            HitResult.Good => "senkyu",
+            HitResult.Meh => "tokkae",
+            _ => base.GetDisplayNameForHitResult(result)
+        };
 
         public class Icon : CompositeDrawable
         {
