@@ -13,6 +13,7 @@ using osu.Game.Rulesets.Difficulty;
 using osu.Game.Rulesets.funnisenkyutokkae.Beatmaps;
 using osu.Game.Rulesets.funnisenkyutokkae.Mods;
 using osu.Game.Rulesets.funnisenkyutokkae.UI;
+using osu.Game.Rulesets.funnisenkyutokkae.Scoring;
 using osu.Game.Rulesets.Mods;
 using osu.Game.Rulesets.UI;
 using osuTK;
