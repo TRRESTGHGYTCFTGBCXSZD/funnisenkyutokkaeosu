@@ -17,9 +17,14 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
-    - name: Restore dependencies
+    - name: ㅓ
       run: dotnet restore
-    - name: Build
+    - name: ㅜ
       run: dotnet build --no-restore
-    - name: Test
+    - name: ㅗ
       run: dotnet test --no-build --verbosity normal
+    - name: ㅏ
+      uses: actions/upload-artifact@v2
+      with:
+        name: funni senkyu tokkae
+        path: osu.Game.Rulesets.Rush/bin/Development/netstandard2.1/osu.Game.Rulesets.funnisenkyutokkae.dll
