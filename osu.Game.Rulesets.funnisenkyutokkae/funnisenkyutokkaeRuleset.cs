@@ -62,7 +62,7 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
                 HitResult.Good,
                 HitResult.Meh
             };
-        };
+        }
 
         public override string GetDisplayNameForHitResult(HitResult result) => result switch
         {
