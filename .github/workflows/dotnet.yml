@@ -20,11 +20,11 @@ jobs:
     - name: ㅓ
       run: dotnet restore
     - name: ㅜ
-      run: dotnet build --no-restore
+      run: dotnet build --configuration funnisenkyutokkae --no-restore
     - name: ㅗ
       run: dotnet test --no-build --verbosity normal
     - name: ㅏ
       uses: actions/upload-artifact@v2
       with:
         name: funni senkyu tokkae
-        path: "*/osu.Game.Rulesets.funnisenkyutokkae.dll"
+        path: osu.Game.Rulesets.Rush/bin/funnisenkyutokkae/*/osu.Game.Rulesets.funnisenkyutokkae.dll
