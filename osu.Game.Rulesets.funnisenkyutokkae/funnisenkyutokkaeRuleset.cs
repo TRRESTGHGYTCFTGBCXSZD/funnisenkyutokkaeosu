@@ -22,7 +22,7 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
 {
     public class funnisenkyutokkaeRuleset : Ruleset
     {
-        public override string Description => "funni senkyu tokkae ruleset";
+        public override string Description => "funni senkyu tokkae";
 
         public override DrawableRuleset CreateDrawableRulesetWith(IBeatmap beatmap, IReadOnlyList<Mod> mods = null) =>
             new DrawablefunnisenkyutokkaeRuleset(this, beatmap, mods);
@@ -37,15 +37,38 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
         {
             switch (type)
             {
+                case ModType.DifficultyReduction:
+                    return new Mod[]
+                    {
+                        new funnisenkyutokkaeModcheckmate(),
+                    };
+                case ModType.DifficultyReduction:
+                    return new Mod[]
+                    {
+                        new funnisenkyutokkaeModdead(),
+                    };
                 case ModType.Automation:
-                    return new[] { new funnisenkyutokkaeModAutoplay() };
-
+                    return new Mod[]
+                    {
+                        new funnisenkyutokkaeModcheckmate(),
+						new MultiMod(new funnisenkyutokkaeModhell(), new funnisenkyutokkaeModfire()),
+                    };
+                case ModType.Conversion:
+                    return new Mod[]
+                    {
+                        new funnisenkyutokkaeModco(),
+                    };
+                case ModType.Fun:
+                    return new Mod[]
+                    {
+                        new funnisenkyutokkaeModfn(),
+                    };
                 default:
                     return new Mod[] { null };
             }
         }
 
-        public override string ShortName => "funnisenkyutokkaeruleset";
+        public override string ShortName => "funnisenkyutokkae";
 
         public override IEnumerable<KeyBinding> GetDefaultKeyBindings(int variant = 0) => new[]
         {

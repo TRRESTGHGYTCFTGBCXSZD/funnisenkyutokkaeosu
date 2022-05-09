@@ -8,7 +8,7 @@ using osu.Game.Rulesets.Mods;
 
 namespace osu.Game.Rulesets.funnisenkyutokkae.Mods
 {
-    public class funnisenkyutokkaeModcheckmate : Modcheckmate
+    public class funnisenkyutokkaeModfn : Modfn
     {
     }
 }
