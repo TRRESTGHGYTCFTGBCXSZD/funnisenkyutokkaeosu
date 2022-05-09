@@ -42,7 +42,7 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
                     {
                         new funnisenkyutokkaeModcheckmate(),
                     };
-                case ModType.DifficultyReduction:
+                case ModType.DifficultyIncrease:
                     return new Mod[]
                     {
                         new funnisenkyutokkaeModdead(),

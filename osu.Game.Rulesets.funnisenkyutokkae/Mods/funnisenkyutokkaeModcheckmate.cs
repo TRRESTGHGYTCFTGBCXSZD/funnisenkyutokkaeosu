@@ -10,5 +10,12 @@ namespace osu.Game.Rulesets.funnisenkyutokkae.Mods
 {
     public class funnisenkyutokkaeModcheckmate : Modcheckmate
     {
+        public override string Name => "checkmate";
+        public override string Acronym => "CM";
+        public override ModType Type => ModType.DifficultyReduction;
+        //public override IconUsage? Icon => TauIcons.ModInverse;
+        public override string Description => @"checknate";
+        public override double ScoreMultiplier => 69;
+        //public override Type[] IncompatibleMods => new[] { typeof(TauModHidden) };
     }
 }

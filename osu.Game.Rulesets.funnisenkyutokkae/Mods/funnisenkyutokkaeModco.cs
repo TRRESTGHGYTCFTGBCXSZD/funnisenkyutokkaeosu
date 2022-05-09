@@ -8,7 +8,14 @@ using osu.Game.Rulesets.Mods;
 
 namespace osu.Game.Rulesets.funnisenkyutokkae.Mods
 {
-    public class funnisenkyutokkaeModco : Modco
+    public class funnisenkyutokkaeModco : Mod
     {
+        public override string Name => "Co";
+        public override string Acronym => "CO";
+        public override ModType Type => ModType.Conversion;
+        //public override IconUsage? Icon => TauIcons.ModInverse;
+        public override string Description => @"co";
+        public override double ScoreMultiplier => 1;
+        //public override Type[] IncompatibleMods => new[] { typeof(TauModHidden) };
     }
 }
