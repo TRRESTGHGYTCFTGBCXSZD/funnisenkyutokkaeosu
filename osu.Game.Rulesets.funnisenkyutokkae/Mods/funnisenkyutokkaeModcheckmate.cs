@@ -8,7 +8,7 @@ using osu.Game.Rulesets.Mods;
 
 namespace osu.Game.Rulesets.funnisenkyutokkae.Mods
 {
-    public class funnisenkyutokkaeModAutoplay : ModAutoplay
+    public class funnisenkyutokkaeModcheckmate : Modcheckmate
     {
         public override ModReplayData CreateReplayData(IBeatmap beatmap, IReadOnlyList<Mod> mods)
             => new ModReplayData(new funnisenkyutokkaeAutoGenerator(beatmap).Generate(), new ModCreatedUser { Username = "sample" });
