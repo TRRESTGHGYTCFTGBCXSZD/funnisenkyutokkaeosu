@@ -21,7 +21,7 @@ namespace osu.Game.Rulesets.funnisenkyutokkae
 
         protected override DifficultyAttributes CreateDifficultyAttributes(IBeatmap beatmap, Mod[] mods, Skill[] skills, double clockRate)
         {
-            return new DifficultyAttributes(mods, 0);
+            return new DifficultyAttributes(mods, 6969.69);
         }
 
         protected override IEnumerable<DifficultyHitObject> CreateDifficultyHitObjects(IBeatmap beatmap, double clockRate) => Enumerable.Empty<DifficultyHitObject>();
